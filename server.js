@@ -9,7 +9,7 @@ app.get('/', async (req, res) => {
     const ipAddress = req.ip.split(':').pop();
 
     const { ip } = ipAddress;
-    const url = `https://api.ipgeolocation.io/ipgeo?apiKey=775c5318c1fd479697017eb228ff9ef7&ip=${ip}`;
+    const url = `https://api.ipgeolocation.io/ipgeo?apiKey=775c5318c1fd479697017eb228ff9ef7&ip`;
 
     try {
         const response = await axios.get(url);
