@@ -8,8 +8,7 @@ app.get('/', async (req, res) => {
 
     const ipAddress = req.ip.split(':').pop();
 
-    const { ip } = ipAddress;
-    const url = `https://api.ipgeolocation.io/ipgeo?apiKey=775c5318c1fd479697017eb228ff9ef7&ip=${ip}`;
+    const url = `https://api.ipgeolocation.io/ipgeo?apiKey=775c5318c1fd479697017eb228ff9ef7&ip=${ipAddress}`;
 
     try {
         const response = await axios.get(url);
@@ -17,7 +16,7 @@ app.get('/', async (req, res) => {
         res.json(data);
     } catch (error) {
         // res.status(500).send(error);
-        res.send(ipAddress)
+        res.send(`https://api.ipgeolocation.io/ipgeo?apiKey=775c5318c1fd479697017eb228ff9ef7&ip=${ipAddress}`)
         console.error("error");
     }
 });
