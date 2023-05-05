@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
     } catch (error) {
         // res.status(500).send(error);
         res.send(`https://api.ipgeolocation.io/ipgeo?apiKey=775c5318c1fd479697017eb228ff9ef7&ip=${ipAddress}`)
-        console.error("error");
+        console.error("error" , ipAddress);
     }
 });
 
