@@ -6,8 +6,9 @@ const app = express();
 
 app.get('/', async (req, res) => {
 
-    const ipAddress = req.ip.split(':').pop();
-
+    // const ipAddress = req.ip.split(':').pop();
+    const ipAddress = '49.37.222.10'
+    console.log("ipAddress" , ipAddress);
     const url = `https://api.ipgeolocation.io/ipgeo?apiKey=775c5318c1fd479697017eb228ff9ef7&ip=${ipAddress}`;
 
     try {
